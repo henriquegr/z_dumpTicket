@@ -35,9 +35,17 @@ Public Class logger
 
     'Cria o arquivo de log
     Private Sub criaArquivo()
-
-        swArquivoLog = New System.IO.StreamWriter(sArquivo & ".log")
-        iArquivoCriado = 1
+        Try
+            If Not System.IO.File.Exists(sArquivo & ".log") Then
+                swArquivoLog = New System.IO.StreamWriter(sArquivo & ".log")
+            End If
+            iArquivoCriado = 1
+        Catch ex As System.IO.DirectoryNotFoundException
+            System.IO.Directory.CreateDirectory(sArquivo.Substring(0, sArquivo.LastIndexOf("\")))
+            swArquivoLog = New System.IO.StreamWriter(sArquivo & ".log")
+        Catch ex As Exception
+            iArquivoCriado = 0
+        End Try
 
     End Sub
 
