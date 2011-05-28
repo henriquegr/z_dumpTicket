@@ -212,7 +212,7 @@ Public Class dumper
             End While
 
             'Aqui chamamos a funçao que processa a coleçao de vars x atributos do SD no arquivo de template
-            substituiValores(aMapeamentos)
+            Return substituiValores(aMapeamentos)
         Else
             log.logErro("Não foi possível encontrar o arquivo de mapeamentos '" & arquivo_de_mapeamentos & "'")
         End If
@@ -274,8 +274,10 @@ Public Class dumper
                     Next
                 End If
 
+            Else
+                'Caso o SD nao tenha retornado nada, nao foi encontrado o objeto e nao iremos seguir adiante
+                Return 0
             End If
-
             Return 1
         Else
             Return 0

@@ -127,18 +127,21 @@
                 'Agora, a partir do arquivo de mapeamentos, efetua as substituições e retorna e grava os valores no
                 'arquivo de destino
                 log.logLine(bDebug, "Abrindo arquivo de mapeamento'" & sArquivoMappings & "'")
-                oDumper.substituiValores(sArquivoMappings)
+                If oDumper.substituiValores(sArquivoMappings) Then
 
-                'Salva o arquivo de destino no path informado
-                log.logLine(bDebug, "Salvando arquivo '" & sArquivoDestino & "' em '" & sPathFinal & "'")
-                oDumper.salvaArquivo(sPathFinal, sArquivoDestino)
-                iRemove = 1
+                    'Salva o arquivo de destino no path informado
+                    log.logLine(bDebug, "Salvando arquivo '" & sArquivoDestino & "' em '" & sPathFinal & "'")
+                    oDumper.salvaArquivo(sPathFinal, sArquivoDestino)
+                    iRemove = 1
+                Else
+                    log.logErro("Não foi possível efetuar a substituição de valores no arquivo " & sArquivoDestino)
+                End If
             Else
                 log.logErro("Não foi possível abrir o arquivo de template")
             End If
-        Else
-            log.logErro("Não foi possível processar o arquivo de mail do Service Desk")
-        End If
+            Else
+                log.logErro("Não foi possível processar o arquivo de mail do Service Desk")
+            End If
 
         oDumper.dispose()
 
