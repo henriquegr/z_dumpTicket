@@ -1,0 +1,1862 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www.ca.com/UnicenterServicePlus/ServiceDesk" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://www.ca.com/UnicenterServicePlus/ServiceDesk" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ca.com/UnicenterServicePlus/ServiceDesk">
+      <s:element name="AddAssetLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assetHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAssetLogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateLrelRelationships">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LrelName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="addObjectHandles" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateLrelRelationshipsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddMemberToGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMemberToGroupResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AttachChangeToRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeAttrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AttachChangeToRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AttachChangeToRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CallServerMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="methodName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="factoryName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="formatList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CallServerMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CallServerMethodResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newStatusHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeStatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearNotification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="lrObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clearBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearNotificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClearNotificationResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateActivityLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LogType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeSpent" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Internal" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateActivityLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateActivityLogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAsset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAssetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAssetResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="NewAssetHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewExtensionHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewExtensionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAssetParentChildRelationship">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="childHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAssetParentChildRelationshipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAssetParentChildRelationshipResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChangeOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creatorHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="propertyValues" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="template" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateChangeOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateChangeOrderResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="newChangeHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newChangeNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIssue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creatorHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="propertyValues" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="template" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateIssueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateIssueResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="newIssueHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newIssueNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateObjectResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="newHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creatorHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="propertyValues" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="template" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateRequestResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="newRequestHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newRequestNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetachChangeFromRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetachChangeFromRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetachChangeFromRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSelect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxRows" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoSelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoSelectResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WhereClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DoQueryResult" type="s0:ListReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ListReturn">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ListHandle" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ListLength" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Escalate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setAssignee" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newAssigneeHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setGroup" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newGroupHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setOrganization" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newOrganizationHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setPriority" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPriorityHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EscalateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EscalateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FreeListHandles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Handles" type="s0:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FreeListHandlesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAssetExtensionInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="assetHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssetExtensionInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssetExtensionInformationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ExtensionHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ExtensionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupMemberListValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numToFetch" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupMemberListValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupMemberListValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjectTypeInformation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="factory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjectTypeInformationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetObjectTypeInformationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHandleForUserid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHandleForUseridResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHandleForUseridResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessTypeForContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccessTypeForContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccessTypeForContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ListHandle" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AttributeNames" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLrelLength">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LrelName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLrelLengthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLrelLengthResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLrelValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LrelName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startIndex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="endIndex" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLrelValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLrelValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotificationsForContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="queryStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNotificationsForContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetNotificationsForContactResult" type="s0:ListReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjectValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetObjectValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetObjectValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPendingChangeTaskListForContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPendingChangeTaskListForContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPendingChangeTaskListForContactResult" type="s0:ListReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPendingIssueTaskListForContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPendingIssueTaskListForContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPendingIssueTaskListForContactResult" type="s0:ListReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyInfoForCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="categoryHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyInfoForCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyInfoForCategoryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRelatedListResult" type="s0:ListReturn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedListValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="listName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="numToFetch" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRelatedListValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRelatedListValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="numRowsFound" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskListValues">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaskListValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaskListValuesResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidTaskTransitions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="taskHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValidTaskTransitionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetValidTaskTransitionsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="NotifyContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messageTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="messageBody" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="notifyLevel" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="notifyees" type="s0:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="Internal" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NotifyContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NotifyContactsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveLrelRelationships">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="contextObject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LrelName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="removeObjectHandles" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveLrelRelationshipsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="RemoveMemberFromGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ContactHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveMemberFromGroupResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServerStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServerStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServerStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Transfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="creator" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setAssignee" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newAssigneeHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setGroup" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newGroupHandle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="setOrganization" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="newOrganizationHandle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectHandle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attrVals" type="s0:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributes" type="s0:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateObjectResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WaitForReply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="secondsToWait" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WaitForReplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReplySuccess" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </types>
+  <message name="AddAssetLogSoapIn">
+    <part name="parameters" element="s0:AddAssetLog" />
+  </message>
+  <message name="AddAssetLogSoapOut">
+    <part name="parameters" element="s0:AddAssetLogResponse" />
+  </message>
+  <message name="CreateLrelRelationshipsSoapIn">
+    <part name="parameters" element="s0:CreateLrelRelationships" />
+  </message>
+  <message name="CreateLrelRelationshipsSoapOut">
+    <part name="parameters" element="s0:CreateLrelRelationshipsResponse" />
+  </message>
+  <message name="AddMemberToGroupSoapIn">
+    <part name="parameters" element="s0:AddMemberToGroup" />
+  </message>
+  <message name="AddMemberToGroupSoapOut">
+    <part name="parameters" element="s0:AddMemberToGroupResponse" />
+  </message>
+  <message name="AttachChangeToRequestSoapIn">
+    <part name="parameters" element="s0:AttachChangeToRequest" />
+  </message>
+  <message name="AttachChangeToRequestSoapOut">
+    <part name="parameters" element="s0:AttachChangeToRequestResponse" />
+  </message>
+  <message name="CallServerMethodSoapIn">
+    <part name="parameters" element="s0:CallServerMethod" />
+  </message>
+  <message name="CallServerMethodSoapOut">
+    <part name="parameters" element="s0:CallServerMethodResponse" />
+  </message>
+  <message name="ChangeStatusSoapIn">
+    <part name="parameters" element="s0:ChangeStatus" />
+  </message>
+  <message name="ChangeStatusSoapOut">
+    <part name="parameters" element="s0:ChangeStatusResponse" />
+  </message>
+  <message name="ClearNotificationSoapIn">
+    <part name="parameters" element="s0:ClearNotification" />
+  </message>
+  <message name="ClearNotificationSoapOut">
+    <part name="parameters" element="s0:ClearNotificationResponse" />
+  </message>
+  <message name="CreateActivityLogSoapIn">
+    <part name="parameters" element="s0:CreateActivityLog" />
+  </message>
+  <message name="CreateActivityLogSoapOut">
+    <part name="parameters" element="s0:CreateActivityLogResponse" />
+  </message>
+  <message name="CreateAssetSoapIn">
+    <part name="parameters" element="s0:CreateAsset" />
+  </message>
+  <message name="CreateAssetSoapOut">
+    <part name="parameters" element="s0:CreateAssetResponse" />
+  </message>
+  <message name="CreateAssetParentChildRelationshipSoapIn">
+    <part name="parameters" element="s0:CreateAssetParentChildRelationship" />
+  </message>
+  <message name="CreateAssetParentChildRelationshipSoapOut">
+    <part name="parameters" element="s0:CreateAssetParentChildRelationshipResponse" />
+  </message>
+  <message name="CreateChangeOrderSoapIn">
+    <part name="parameters" element="s0:CreateChangeOrder" />
+  </message>
+  <message name="CreateChangeOrderSoapOut">
+    <part name="parameters" element="s0:CreateChangeOrderResponse" />
+  </message>
+  <message name="CreateIssueSoapIn">
+    <part name="parameters" element="s0:CreateIssue" />
+  </message>
+  <message name="CreateIssueSoapOut">
+    <part name="parameters" element="s0:CreateIssueResponse" />
+  </message>
+  <message name="CreateObjectSoapIn">
+    <part name="parameters" element="s0:CreateObject" />
+  </message>
+  <message name="CreateObjectSoapOut">
+    <part name="parameters" element="s0:CreateObjectResponse" />
+  </message>
+  <message name="CreateRequestSoapIn">
+    <part name="parameters" element="s0:CreateRequest" />
+  </message>
+  <message name="CreateRequestSoapOut">
+    <part name="parameters" element="s0:CreateRequestResponse" />
+  </message>
+  <message name="DetachChangeFromRequestSoapIn">
+    <part name="parameters" element="s0:DetachChangeFromRequest" />
+  </message>
+  <message name="DetachChangeFromRequestSoapOut">
+    <part name="parameters" element="s0:DetachChangeFromRequestResponse" />
+  </message>
+  <message name="DoSelectSoapIn">
+    <part name="parameters" element="s0:DoSelect" />
+  </message>
+  <message name="DoSelectSoapOut">
+    <part name="parameters" element="s0:DoSelectResponse" />
+  </message>
+  <message name="DoQuerySoapIn">
+    <part name="parameters" element="s0:DoQuery" />
+  </message>
+  <message name="DoQuerySoapOut">
+    <part name="parameters" element="s0:DoQueryResponse" />
+  </message>
+  <message name="EscalateSoapIn">
+    <part name="parameters" element="s0:Escalate" />
+  </message>
+  <message name="EscalateSoapOut">
+    <part name="parameters" element="s0:EscalateResponse" />
+  </message>
+  <message name="FreeListHandlesSoapIn">
+    <part name="parameters" element="s0:FreeListHandles" />
+  </message>
+  <message name="FreeListHandlesSoapOut">
+    <part name="parameters" element="s0:FreeListHandlesResponse" />
+  </message>
+  <message name="GetAssetExtensionInformationSoapIn">
+    <part name="parameters" element="s0:GetAssetExtensionInformation" />
+  </message>
+  <message name="GetAssetExtensionInformationSoapOut">
+    <part name="parameters" element="s0:GetAssetExtensionInformationResponse" />
+  </message>
+  <message name="GetGroupMemberListValuesSoapIn">
+    <part name="parameters" element="s0:GetGroupMemberListValues" />
+  </message>
+  <message name="GetGroupMemberListValuesSoapOut">
+    <part name="parameters" element="s0:GetGroupMemberListValuesResponse" />
+  </message>
+  <message name="GetObjectTypeInformationSoapIn">
+    <part name="parameters" element="s0:GetObjectTypeInformation" />
+  </message>
+  <message name="GetObjectTypeInformationSoapOut">
+    <part name="parameters" element="s0:GetObjectTypeInformationResponse" />
+  </message>
+  <message name="GetHandleForUseridSoapIn">
+    <part name="parameters" element="s0:GetHandleForUserid" />
+  </message>
+  <message name="GetHandleForUseridSoapOut">
+    <part name="parameters" element="s0:GetHandleForUseridResponse" />
+  </message>
+  <message name="GetAccessTypeForContactSoapIn">
+    <part name="parameters" element="s0:GetAccessTypeForContact" />
+  </message>
+  <message name="GetAccessTypeForContactSoapOut">
+    <part name="parameters" element="s0:GetAccessTypeForContactResponse" />
+  </message>
+  <message name="GetListValuesSoapIn">
+    <part name="parameters" element="s0:GetListValues" />
+  </message>
+  <message name="GetListValuesSoapOut">
+    <part name="parameters" element="s0:GetListValuesResponse" />
+  </message>
+  <message name="GetLrelLengthSoapIn">
+    <part name="parameters" element="s0:GetLrelLength" />
+  </message>
+  <message name="GetLrelLengthSoapOut">
+    <part name="parameters" element="s0:GetLrelLengthResponse" />
+  </message>
+  <message name="GetLrelValuesSoapIn">
+    <part name="parameters" element="s0:GetLrelValues" />
+  </message>
+  <message name="GetLrelValuesSoapOut">
+    <part name="parameters" element="s0:GetLrelValuesResponse" />
+  </message>
+  <message name="GetNotificationsForContactSoapIn">
+    <part name="parameters" element="s0:GetNotificationsForContact" />
+  </message>
+  <message name="GetNotificationsForContactSoapOut">
+    <part name="parameters" element="s0:GetNotificationsForContactResponse" />
+  </message>
+  <message name="GetObjectValuesSoapIn">
+    <part name="parameters" element="s0:GetObjectValues" />
+  </message>
+  <message name="GetObjectValuesSoapOut">
+    <part name="parameters" element="s0:GetObjectValuesResponse" />
+  </message>
+  <message name="GetPendingChangeTaskListForContactSoapIn">
+    <part name="parameters" element="s0:GetPendingChangeTaskListForContact" />
+  </message>
+  <message name="GetPendingChangeTaskListForContactSoapOut">
+    <part name="parameters" element="s0:GetPendingChangeTaskListForContactResponse" />
+  </message>
+  <message name="GetPendingIssueTaskListForContactSoapIn">
+    <part name="parameters" element="s0:GetPendingIssueTaskListForContact" />
+  </message>
+  <message name="GetPendingIssueTaskListForContactSoapOut">
+    <part name="parameters" element="s0:GetPendingIssueTaskListForContactResponse" />
+  </message>
+  <message name="GetPropertyInfoForCategorySoapIn">
+    <part name="parameters" element="s0:GetPropertyInfoForCategory" />
+  </message>
+  <message name="GetPropertyInfoForCategorySoapOut">
+    <part name="parameters" element="s0:GetPropertyInfoForCategoryResponse" />
+  </message>
+  <message name="GetRelatedListSoapIn">
+    <part name="parameters" element="s0:GetRelatedList" />
+  </message>
+  <message name="GetRelatedListSoapOut">
+    <part name="parameters" element="s0:GetRelatedListResponse" />
+  </message>
+  <message name="GetRelatedListValuesSoapIn">
+    <part name="parameters" element="s0:GetRelatedListValues" />
+  </message>
+  <message name="GetRelatedListValuesSoapOut">
+    <part name="parameters" element="s0:GetRelatedListValuesResponse" />
+  </message>
+  <message name="GetTaskListValuesSoapIn">
+    <part name="parameters" element="s0:GetTaskListValues" />
+  </message>
+  <message name="GetTaskListValuesSoapOut">
+    <part name="parameters" element="s0:GetTaskListValuesResponse" />
+  </message>
+  <message name="GetValidTaskTransitionsSoapIn">
+    <part name="parameters" element="s0:GetValidTaskTransitions" />
+  </message>
+  <message name="GetValidTaskTransitionsSoapOut">
+    <part name="parameters" element="s0:GetValidTaskTransitionsResponse" />
+  </message>
+  <message name="LoginSoapIn">
+    <part name="parameters" element="s0:Login" />
+  </message>
+  <message name="LoginSoapOut">
+    <part name="parameters" element="s0:LoginResponse" />
+  </message>
+  <message name="LogoutSoapIn">
+    <part name="parameters" element="s0:Logout" />
+  </message>
+  <message name="LogoutSoapOut">
+    <part name="parameters" element="s0:LogoutResponse" />
+  </message>
+  <message name="NotifyContactsSoapIn">
+    <part name="parameters" element="s0:NotifyContacts" />
+  </message>
+  <message name="NotifyContactsSoapOut">
+    <part name="parameters" element="s0:NotifyContactsResponse" />
+  </message>
+  <message name="RemoveLrelRelationshipsSoapIn">
+    <part name="parameters" element="s0:RemoveLrelRelationships" />
+  </message>
+  <message name="RemoveLrelRelationshipsSoapOut">
+    <part name="parameters" element="s0:RemoveLrelRelationshipsResponse" />
+  </message>
+  <message name="RemoveMemberFromGroupSoapIn">
+    <part name="parameters" element="s0:RemoveMemberFromGroup" />
+  </message>
+  <message name="RemoveMemberFromGroupSoapOut">
+    <part name="parameters" element="s0:RemoveMemberFromGroupResponse" />
+  </message>
+  <message name="ServerStatusSoapIn">
+    <part name="parameters" element="s0:ServerStatus" />
+  </message>
+  <message name="ServerStatusSoapOut">
+    <part name="parameters" element="s0:ServerStatusResponse" />
+  </message>
+  <message name="TransferSoapIn">
+    <part name="parameters" element="s0:Transfer" />
+  </message>
+  <message name="TransferSoapOut">
+    <part name="parameters" element="s0:TransferResponse" />
+  </message>
+  <message name="UpdateObjectSoapIn">
+    <part name="parameters" element="s0:UpdateObject" />
+  </message>
+  <message name="UpdateObjectSoapOut">
+    <part name="parameters" element="s0:UpdateObjectResponse" />
+  </message>
+  <message name="WaitForReplySoapIn">
+    <part name="parameters" element="s0:WaitForReply" />
+  </message>
+  <message name="WaitForReplySoapOut">
+    <part name="parameters" element="s0:WaitForReplyResponse" />
+  </message>
+  <portType name="USD_WebServiceSoap">
+    <operation name="AddAssetLog">
+      <documentation>
+Adds a log to an Asset   </documentation>
+      <input message="s0:AddAssetLogSoapIn" />
+      <output message="s0:AddAssetLogSoapOut" />
+    </operation>
+    <operation name="CreateLrelRelationships">
+      <documentation>
+Creates many-to-many relationships   </documentation>
+      <input message="s0:CreateLrelRelationshipsSoapIn" />
+      <output message="s0:CreateLrelRelationshipsSoapOut" />
+    </operation>
+    <operation name="AddMemberToGroup">
+      <documentation>
+Adds a contact member to a group   </documentation>
+      <input message="s0:AddMemberToGroupSoapIn" />
+      <output message="s0:AddMemberToGroupSoapOut" />
+    </operation>
+    <operation name="AttachChangeToRequest">
+      <documentation>
+Attach a new or existing Change Order to a Request   </documentation>
+      <input message="s0:AttachChangeToRequestSoapIn" />
+      <output message="s0:AttachChangeToRequestSoapOut" />
+    </operation>
+    <operation name="CallServerMethod">
+      <documentation>
+Invokes a Service Desk Server method   </documentation>
+      <input message="s0:CallServerMethodSoapIn" />
+      <output message="s0:CallServerMethodSoapOut" />
+    </operation>
+    <operation name="ChangeStatus">
+      <documentation>
+Performs a Status Change Activity on a Request, Issue or Change Order   </documentation>
+      <input message="s0:ChangeStatusSoapIn" />
+      <output message="s0:ChangeStatusSoapOut" />
+    </operation>
+    <operation name="ClearNotification">
+      <documentation>
+Clears a Notification message object   </documentation>
+      <input message="s0:ClearNotificationSoapIn" />
+      <output message="s0:ClearNotificationSoapOut" />
+    </operation>
+    <operation name="CreateActivityLog">
+      <documentation>
+Creates an Activity Log for a Request, Issue or Change Order   </documentation>
+      <input message="s0:CreateActivityLogSoapIn" />
+      <output message="s0:CreateActivityLogSoapOut" />
+    </operation>
+    <operation name="CreateAsset">
+      <documentation>
+Creates a new service desk object   </documentation>
+      <input message="s0:CreateAssetSoapIn" />
+      <output message="s0:CreateAssetSoapOut" />
+    </operation>
+    <operation name="CreateAssetParentChildRelationship">
+      <documentation>
+Creates a parent-child relationship between two Assets   </documentation>
+      <input message="s0:CreateAssetParentChildRelationshipSoapIn" />
+      <output message="s0:CreateAssetParentChildRelationshipSoapOut" />
+    </operation>
+    <operation name="CreateChangeOrder">
+      <documentation>
+Creates a new Change Order   </documentation>
+      <input message="s0:CreateChangeOrderSoapIn" />
+      <output message="s0:CreateChangeOrderSoapOut" />
+    </operation>
+    <operation name="CreateIssue">
+      <documentation>
+Creates a new Issue   </documentation>
+      <input message="s0:CreateIssueSoapIn" />
+      <output message="s0:CreateIssueSoapOut" />
+    </operation>
+    <operation name="CreateObject">
+      <documentation>
+Creates a new service desk object   </documentation>
+      <input message="s0:CreateObjectSoapIn" />
+      <output message="s0:CreateObjectSoapOut" />
+    </operation>
+    <operation name="CreateRequest">
+      <documentation>
+Creates a new Request   </documentation>
+      <input message="s0:CreateRequestSoapIn" />
+      <output message="s0:CreateRequestSoapOut" />
+    </operation>
+    <operation name="DetachChangeFromRequest">
+      <documentation>
+Detach a Change Order from a Request   </documentation>
+      <input message="s0:DetachChangeFromRequestSoapIn" />
+      <output message="s0:DetachChangeFromRequestSoapOut" />
+    </operation>
+    <operation name="DoSelect">
+      <documentation>
+Performs a SQL-like select operation and returns values for matching objects   </documentation>
+      <input message="s0:DoSelectSoapIn" />
+      <output message="s0:DoSelectSoapOut" />
+    </operation>
+    <operation name="DoQuery">
+      <documentation>
+Returns a list reference for the supplied where clause   </documentation>
+      <input message="s0:DoQuerySoapIn" />
+      <output message="s0:DoQuerySoapOut" />
+    </operation>
+    <operation name="Escalate">
+      <documentation>
+Performs an Escalate Activity on a Request, Issue or Change Order   </documentation>
+      <input message="s0:EscalateSoapIn" />
+      <output message="s0:EscalateSoapOut" />
+    </operation>
+    <operation name="FreeListHandles">
+      <documentation>
+Frees one or more list handles   </documentation>
+      <input message="s0:FreeListHandlesSoapIn" />
+      <output message="s0:FreeListHandlesSoapOut" />
+    </operation>
+    <operation name="GetAssetExtensionInformation">
+      <documentation>
+Retrieves information about an Asset's extension object   </documentation>
+      <input message="s0:GetAssetExtensionInformationSoapIn" />
+      <output message="s0:GetAssetExtensionInformationSoapOut" />
+    </operation>
+    <operation name="GetGroupMemberListValues">
+      <documentation>
+Retrieves values from group relationships   </documentation>
+      <input message="s0:GetGroupMemberListValuesSoapIn" />
+      <output message="s0:GetGroupMemberListValuesSoapOut" />
+    </operation>
+    <operation name="GetObjectTypeInformation">
+      <documentation>
+Retrieves type information for a factory   </documentation>
+      <input message="s0:GetObjectTypeInformationSoapIn" />
+      <output message="s0:GetObjectTypeInformationSoapOut" />
+    </operation>
+    <operation name="GetHandleForUserid">
+      <documentation>
+Returns a Contact handle given a userid   </documentation>
+      <input message="s0:GetHandleForUseridSoapIn" />
+      <output message="s0:GetHandleForUseridSoapOut" />
+    </operation>
+    <operation name="GetAccessTypeForContact">
+      <documentation>
+Returns a Contact's Access Type   </documentation>
+      <input message="s0:GetAccessTypeForContactSoapIn" />
+      <output message="s0:GetAccessTypeForContactSoapOut" />
+    </operation>
+    <operation name="GetListValues">
+      <documentation>
+Retrives values from a list reference   </documentation>
+      <input message="s0:GetListValuesSoapIn" />
+      <output message="s0:GetListValuesSoapOut" />
+    </operation>
+    <operation name="GetLrelLength">
+      <documentation>
+Returns the length of one side of an Lrel relationship   </documentation>
+      <input message="s0:GetLrelLengthSoapIn" />
+      <output message="s0:GetLrelLengthSoapOut" />
+    </operation>
+    <operation name="GetLrelValues">
+      <documentation>
+Retrives values from many-to-many relationships   </documentation>
+      <input message="s0:GetLrelValuesSoapIn" />
+      <output message="s0:GetLrelValuesSoapOut" />
+    </operation>
+    <operation name="GetNotificationsForContact">
+      <documentation>
+Returns a list reference of a contact's Notifications   </documentation>
+      <input message="s0:GetNotificationsForContactSoapIn" />
+      <output message="s0:GetNotificationsForContactSoapOut" />
+    </operation>
+    <operation name="GetObjectValues">
+      <documentation>
+Returns values for a specified object's attributes   </documentation>
+      <input message="s0:GetObjectValuesSoapIn" />
+      <output message="s0:GetObjectValuesSoapOut" />
+    </operation>
+    <operation name="GetPendingChangeTaskListForContact">
+      <documentation>
+Returns all 'pending' Change Order tasks for an assignee   </documentation>
+      <input message="s0:GetPendingChangeTaskListForContactSoapIn" />
+      <output message="s0:GetPendingChangeTaskListForContactSoapOut" />
+    </operation>
+    <operation name="GetPendingIssueTaskListForContact">
+      <documentation>
+Returns all 'pending' Issue tasks for an assignee   </documentation>
+      <input message="s0:GetPendingIssueTaskListForContactSoapIn" />
+      <output message="s0:GetPendingIssueTaskListForContactSoapOut" />
+    </operation>
+    <operation name="GetPropertyInfoForCategory">
+      <documentation>
+Returns property template information for a category   </documentation>
+      <input message="s0:GetPropertyInfoForCategorySoapIn" />
+      <output message="s0:GetPropertyInfoForCategorySoapOut" />
+    </operation>
+    <operation name="GetRelatedList">
+      <documentation>
+Retrives a list reference from an object   </documentation>
+      <input message="s0:GetRelatedListSoapIn" />
+      <output message="s0:GetRelatedListSoapOut" />
+    </operation>
+    <operation name="GetRelatedListValues">
+      <documentation>
+Retrieves values from rows in a list owned by an object   </documentation>
+      <input message="s0:GetRelatedListValuesSoapIn" />
+      <output message="s0:GetRelatedListValuesSoapOut" />
+    </operation>
+    <operation name="GetTaskListValues">
+      <documentation>
+Retrives values for the Tasks owned by a Change Order or Issue   </documentation>
+      <input message="s0:GetTaskListValuesSoapIn" />
+      <output message="s0:GetTaskListValuesSoapOut" />
+    </operation>
+    <operation name="GetValidTaskTransitions">
+      <documentation>
+Returns all possible Task Status objects usable by a specific Task   </documentation>
+      <input message="s0:GetValidTaskTransitionsSoapIn" />
+      <output message="s0:GetValidTaskTransitionsSoapOut" />
+    </operation>
+    <operation name="Login">
+      <documentation>
+Returns a session id required by all other methods   </documentation>
+      <input message="s0:LoginSoapIn" />
+      <output message="s0:LoginSoapOut" />
+    </operation>
+    <operation name="Logout">
+      <documentation>
+Invalidates a session   </documentation>
+      <input message="s0:LogoutSoapIn" />
+      <output message="s0:LogoutSoapOut" />
+    </operation>
+    <operation name="NotifyContacts">
+      <documentation>
+Send a Notification to Contacts   </documentation>
+      <input message="s0:NotifyContactsSoapIn" />
+      <output message="s0:NotifyContactsSoapOut" />
+    </operation>
+    <operation name="RemoveLrelRelationships">
+      <documentation>
+Removes many-to-many relationships   </documentation>
+      <input message="s0:RemoveLrelRelationshipsSoapIn" />
+      <output message="s0:RemoveLrelRelationshipsSoapOut" />
+    </operation>
+    <operation name="RemoveMemberFromGroup">
+      <documentation>
+Removes a member from a group   </documentation>
+      <input message="s0:RemoveMemberFromGroupSoapIn" />
+      <output message="s0:RemoveMemberFromGroupSoapOut" />
+    </operation>
+    <operation name="ServerStatus">
+      <documentation>
+Returns '0' if Service Desk server is available.   </documentation>
+      <input message="s0:ServerStatusSoapIn" />
+      <output message="s0:ServerStatusSoapOut" />
+    </operation>
+    <operation name="Transfer">
+      <documentation>
+Performs a Transfer Activity on a Request, Issue or Change Order   </documentation>
+      <input message="s0:TransferSoapIn" />
+      <output message="s0:TransferSoapOut" />
+    </operation>
+    <operation name="UpdateObject">
+      <documentation>
+Sets one or more attribute values for an object   </documentation>
+      <input message="s0:UpdateObjectSoapIn" />
+      <output message="s0:UpdateObjectSoapOut" />
+    </operation>
+    <operation name="WaitForReply">
+      <documentation>
+Waits for a reply from a timed-out method call   </documentation>
+      <input message="s0:WaitForReplySoapIn" />
+      <output message="s0:WaitForReplySoapOut" />
+    </operation>
+  </portType>
+  <binding name="USD_WebServiceSoap" type="s0:USD_WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddAssetLog">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/AddAssetLog" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateLrelRelationships">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateLrelRelationships" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddMemberToGroup">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/AddMemberToGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AttachChangeToRequest">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/AttachChangeToRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CallServerMethod">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CallServerMethod" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangeStatus">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/ChangeStatus" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ClearNotification">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/ClearNotification" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateActivityLog">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateActivityLog" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateAsset">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateAsset" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateAssetParentChildRelationship">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateAssetParentChildRelationship" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateChangeOrder">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateChangeOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateIssue">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateIssue" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateObject">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateObject" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateRequest">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/CreateRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DetachChangeFromRequest">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/DetachChangeFromRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DoSelect">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/DoSelect" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DoQuery">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/DoQuery" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Escalate">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/Escalate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="FreeListHandles">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/FreeListHandles" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAssetExtensionInformation">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetAssetExtensionInformation" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetGroupMemberListValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetGroupMemberListValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetObjectTypeInformation">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetObjectTypeInformation" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetHandleForUserid">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetHandleForUserid" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetAccessTypeForContact">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetAccessTypeForContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetListValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetListValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLrelLength">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetLrelLength" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetLrelValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetLrelValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNotificationsForContact">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetNotificationsForContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetObjectValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetObjectValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPendingChangeTaskListForContact">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetPendingChangeTaskListForContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPendingIssueTaskListForContact">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetPendingIssueTaskListForContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetPropertyInfoForCategory">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetPropertyInfoForCategory" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRelatedList">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetRelatedList" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetRelatedListValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetRelatedListValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetTaskListValues">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetTaskListValues" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetValidTaskTransitions">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/GetValidTaskTransitions" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/Login" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Logout">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/Logout" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="NotifyContacts">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/NotifyContacts" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveLrelRelationships">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/RemoveLrelRelationships" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RemoveMemberFromGroup">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/RemoveMemberFromGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ServerStatus">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/ServerStatus" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Transfer">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/Transfer" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="UpdateObject">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/UpdateObject" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="WaitForReply">
+      <soap:operation soapAction="http://www.ca.com/UnicenterServicePlus/ServiceDesk/WaitForReply" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="USD_WebService">
+    <documentation>
+Web Service for Unicenter ServicePlus ServiceDesk  </documentation>
+    <port name="USD_WebServiceSoap" binding="s0:USD_WebServiceSoap">
+      <soap:address location="http://sdm121br:8080/axis/services/USD_WebServiceSoap" />
+    </port>
+  </service>
+</definitions>

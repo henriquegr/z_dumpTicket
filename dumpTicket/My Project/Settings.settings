@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="dumpTicket_sdws_USD_WebService" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://localhost:8080/axis/services/USD_WebServiceSoap</Value>
+    </Setting>
+    <Setting Name="sUsuarioSDM" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ServiceDesk</Value>
+    </Setting>
+    <Setting Name="sSenhaSDM" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

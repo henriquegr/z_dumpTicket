@@ -1,0 +1,2 @@
+$valor=chg_ref_num
+$valor2=open_date

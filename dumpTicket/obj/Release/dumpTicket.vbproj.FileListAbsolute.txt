@@ -1,0 +1,26 @@
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.exe.config
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.exe
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.XmlSerializers.dll
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.pdb
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.xml
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.config.resources
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.Resources.resources
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.exe
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.xml
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.pdb
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.XmlSerializers.dll
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.exe.config
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.exe
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.XmlSerializers.dll
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.pdb
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Release\z_dumpTicket.xml
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\ResolveAssemblyReference.cache
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.configForm.resources
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.Resources.resources
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\dumpTicket.vbproj.GenerateResource.Cache
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.exe
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.xml
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.pdb
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Release\z_dumpTicket.XmlSerializers.dll

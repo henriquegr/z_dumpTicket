@@ -1,0 +1,22 @@
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.Resources.resources
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.exe.config
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.exe
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.pdb
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.xml
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.exe
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.xml
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.pdb
+C:\Documents and Settings\Administrador\Meus documentos\Visual Studio 2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.configForm.resources
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.exe.config
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.exe
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.xml
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\z_dumpTicket.pdb
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.exe
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.pdb
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\bin\Debug\z_dumpTicket.xml
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\ResolveAssemblyReference.cache
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.configForm.resources
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.Resources.resources
+Z:\home\Files\Dev\VBNETProjs2008\Projects\dumpTicket\dumpTicket\obj\Debug\dumpTicket.vbproj.GenerateResource.Cache
