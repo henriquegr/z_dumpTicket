@@ -82,9 +82,13 @@ Public Class logger
         'A var debug armazena um booleano que informa se devemos ou não registrar em LOG. Caso esteja em modo de 
         'depuração, iremos armazenar em log.
         If armazenaEmArquivo Then
-            swArquivoLog.WriteLine(mensagem)
-            swArquivoLog.Flush()
-            Console.WriteLine(mensagem)
+            Try
+                swArquivoLog.WriteLine(mensagem)
+                swArquivoLog.Flush()
+                Console.WriteLine(mensagem)
+            Catch ex As Exception
+                Console.WriteLine(mensagem)
+            End Try
         Else
             Console.WriteLine(mensagem)
         End If
